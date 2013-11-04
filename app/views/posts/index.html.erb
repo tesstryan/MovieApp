@@ -1,0 +1,16 @@
+<style>
+body {font-family: Arial;}
+</style>
+
+<h4>Movies that you should see</h4>
+
+<p>
+<% @posts.each do |post| %>
+  <%= link_to post.title, post_url(post.id) %><br>
+  <%= link_to "Edit Item", edit_post_url(post.id) %>
+  <%= link_to "Delete", post_url(post.id), method: 'delete' %>
+  <br>
+<% end %>
+</p>
+
+<%= link_to "Add a movie", new_post_url %>

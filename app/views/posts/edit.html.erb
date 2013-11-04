@@ -1,0 +1,14 @@
+<h3>Add a movie to the list:</h3>
+
+<%= form_tag posts_url, method: 'post' %>
+
+<%= label_tag 'title', "Title:" %>
+<%= text_field_tag 'title', @post.title %>
+<br>
+<%= label_tag 'description', "Description:" %>
+<%= text_field_tag 'description', @post.description %>
+<br>
+<%= label_tag 'year', "Year Released:" %>
+<%= text_field_tag 'year', @post.year %>
+<br>
+<%= submit_tag "Submit that Sh!T" %>
